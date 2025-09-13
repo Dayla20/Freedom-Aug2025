@@ -123,6 +123,7 @@ button:active {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 /* Highlights */
    
 #highlights {
@@ -180,13 +181,15 @@ button:active {
     font-size: 20px;
     margin-bottom: 16px;
 }
-/* Features */
-#features {
+/* Featured */
+#featured {
     padding-top: 8vw;
-    background-color: rgba(115, 66, 214, 0.1);
+    background-color:#f1ecfa;
 }
+
 .books {
     display: flex;
+    flex-wrap: wrap;
 }
 .book {
     width: 25%;
@@ -222,4 +225,38 @@ button:active {
     text-decoration:line-through;
     padding-right: 6px;
     color: #bfbfbf
+}
+/* LATEST */
+#latest {
+    padding-top: 2vw;
+}
+
+
+/* EXPLORE */
+
+#explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#f1ecfa;
+        }
+.row__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #explore {
+    min-height: auto;        
+    padding: 60px 20px;      
+  }
+
+  .btn {
+    width: 100%;           
+    max-width: 300px;        
+  }
 }
