@@ -383,3 +383,25 @@ footer{
             margin-bottom: 24px;
         }
     }
+    /* Make the hero illustration truly responsive */
+.header__img--wrapper {
+  /* keep it centered and constrained on all screens */
+  max-width: clamp(280px, 90vw, 720px);
+  margin: 0 auto;
+  padding: 0;          /* avoids extra whitespace on small screens */
+}
+
+.header__img--wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;        /* important: no stretching */
+  max-height: none;    /* override any global max-height */
+  padding: 0;          /* override the global img padding */
+}
+
+/* Optional: adjust layout for phones so the image fits nicely */
+@media (max-width: 550px) {
+  header { height: auto; }               /* let the header grow naturally */
+  .header__container { gap: 16px; }      /* a little breathing room */
+  .header__img--wrapper { max-width: 92vw; }
+}
